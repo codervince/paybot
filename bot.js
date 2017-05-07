@@ -13,7 +13,7 @@ var SLACK_TOKEN = argv['slack-token'] || process.env.TIPBOT_SLACK_TOKEN,
     SECRET = argv['secret'] || process.env.TIPBOT_SECRET,
     TESTNET = argv['testnet'] || process.env.TIPBOT_TESTNET,
     AUTO_RECONNECT = true,
-    OPTIONS = {ALL_BALANCES: true, DEMAND: true};
+    OPTIONS = { ALL_BALANCES: true, DEMAND: true };
 
 assert(SLACK_TOKEN, "--slack-token or TIPBOT_SLACK_TOKEN is required");
 assert(BLOCKTRAIL_APIKEY, "--blocktrail-apikey or TIPBOT_BLOCKTRAIL_APIKEY is required");
@@ -27,7 +27,7 @@ assert(SECRET, "--secret or TIPBOT_SECRET is required");
  * @returns {*}
  */
 Slack.prototype.getDMByUserId = function(userId) {
-    return _.find(this.dms, {user: userId});
+    return _.find(this.dms, { user: userId });
 };
 
 Slack.prototype.reconnect = function() {

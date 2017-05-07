@@ -32,3 +32,6 @@ npm-debug.log
 test.sh
 
 ._readme.md
+
+.vscode
+tmp
